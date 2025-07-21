@@ -21,9 +21,20 @@
   .btn {
     @apply px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600;
   }
+
+
   .dark .btn {
     @apply bg-blue-700 hover:bg-blue-800;
   }
+  
+  .header-country {
+    @apply absolute top-0 left-0 w-screen bg-gray-50 h-14;
+  }
+
+  .dark .header-country {
+    @apply absolute top-0 left-0 w-screen bg-blue-200 h-14;
+  }
+
 }
 
 @layer utilities {
@@ -36,12 +47,15 @@
 }
 
 @layer base {
+  html {
+    @apply m-0 p-0;
+  }
 
   body {
-    @apply bg-gray-100 text-gray-900;
+    @apply bg-gray-100 text-gray-900 m-0 p-0;
   }
-  .dark body {
-    @apply bg-blue-950 text-white;
+  html.dark body {
+      @apply bg-gray-900 text-white;
   }
 
   h1 {
@@ -53,7 +67,4 @@
     @apply text-purple-300;
   }
 
-  div {
-    @aply justify-center items-center flex flex-col min-h-screen;
-  }
 }

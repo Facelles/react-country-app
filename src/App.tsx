@@ -17,12 +17,12 @@ function App() {
   useEffect(() => {
     localStorage.setItem("darkMode", darkMode.toString());
 
-    const bodyEL = document.body;
-    if (bodyEL){
+    const htmlEL = document.documentElement;
+    if (htmlEL){
       if(darkMode){
-        bodyEL.classList.add("dark");
+        htmlEL.classList.add("dark");
       }else{
-        bodyEL.classList.remove("dark");
+        htmlEL.classList.remove("dark");
       }
     }
   }, [darkMode]);
@@ -30,10 +30,20 @@ function App() {
 
   return (
     <ThemeProvider value={{ darkMode, toggleTheme: toogleDarkMode }}>
-      <div className="App ">
-        <ThemeSwitcher />
-        <h1 className="">Current Theme: {darkMode ? 'Dark' : 'Light'}</h1>
-      </div>
+      <main className="App ">
+        <header className='absolute top-0 left-0 w-screen bg-white h-17 dark:bg-white'>
+          <div className='max-w-screen-xl mx-auto grid grid-cols-2 flex justify-between items-center h-full'>
+            <p className='font-bold'>Where in the world?</p>
+            <ThemeSwitcher/>
+          </div>
+        </header>
+
+        <body>
+          <h1>
+            sSFDk
+          </h1>
+        </body>
+      </main>
     </ThemeProvider>
   );
 }

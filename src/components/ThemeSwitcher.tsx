@@ -8,7 +8,7 @@ const ThemeSwitcher = () => {
     <>
         <div>
             <button>
-                <span className="text-2xs " onClick={toogleDarkMode}>
+                <span className="text-xs " onClick={toogleDarkMode}>
                     {darkMode ? '🌙 Dark Mode' : '☀️ Light Mode'}
                 </span>
             </button>

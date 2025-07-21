@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.light{
+  @apply bg-white text-black;
+}
+
+.dark {
+  @apply bg-gray-900 text-white;
+}
+
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600;
+  }
+  .dark .btn {
+    @apply bg-blue-700 hover:bg-blue-800;
+  }
+}
+
+@layer utilities {
+  .text-primary {
+    @apply text-blue-500;
+  }
+  .dark .text-primary {
+    @apply text-blue-300;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-white text-black;
+  }
+  .dark body {
+    @apply bg-gray-900 text-white;
+  }
+}

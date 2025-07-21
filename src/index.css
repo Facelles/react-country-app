@@ -49,6 +49,6 @@
   }
 
   .dark h1 {
-    @apply text-purple-300;
+    @apply text-purple-300 bg-blue-500;
   }
 }

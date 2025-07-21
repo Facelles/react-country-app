@@ -36,11 +36,12 @@
 }
 
 @layer base {
+
   body {
-    @apply bg-white text-black;
+    @apply bg-gray-100 text-gray-900;
   }
   .dark body {
-    @apply bg-gray-900 text-white;
+    @apply bg-blue-950 text-white;
   }
 
   h1 {
@@ -50,5 +51,9 @@
 
   .dark h1 {
     @apply text-purple-300;
+  }
+
+  div {
+    @aply justify-center items-center flex flex-col min-h-screen;
   }
 }

@@ -30,9 +30,9 @@ function App() {
 
   return (
     <ThemeProvider value={{ darkMode, toggleTheme: toogleDarkMode }}>
-      <div className="App">
+      <div className="App ">
         <ThemeSwitcher />
-        <h1 className="text-2xl">Current Theme: {darkMode ? 'Dark' : 'Light'}</h1>
+        <h1 className="">Current Theme: {darkMode ? 'Dark' : 'Light'}</h1>
       </div>
     </ThemeProvider>
   );

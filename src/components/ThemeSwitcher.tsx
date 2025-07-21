@@ -8,13 +8,13 @@ const ThemeSwitcher = () => {
     <>
         <div>
             <button>
-                <span className="text-2xl mt-2" onClick={toogleDarkMode}>
-                    {darkMode ? '🌙' : '☀️'}
+                <span className="text-2xs " onClick={toogleDarkMode}>
+                    {darkMode ? '🌙 Dark Mode' : '☀️ Light Mode'}
                 </span>
             </button>
         </div>
     </>
-  )
+  ) 
 }
 
 export default ThemeSwitcher

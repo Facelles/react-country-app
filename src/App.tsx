@@ -39,9 +39,9 @@ function App() {
       </header>
 
       <div className="min-h-screen w-full pt-16">
-        <h1 className="text-2xl text-black dark:text-purple-200">
-          HELLO, WORLD
-        </h1>
+        <form action="/search" method='get'>
+          <input type="search" name='q' placeholder='Search for a country..' />
+        </form>
       </div>
     </main>
   </ThemeProvider>

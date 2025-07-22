@@ -31,15 +31,15 @@ function App() {
   return (
   <ThemeProvider value={{ darkMode, toggleTheme: toogleDarkMode }}>
     <main className="App">
-      <header className="fixed top-0 left-0 w-full bg-white h-16 z-50">
-        <div className="max-w-screen-xl flex justify-between items-center h-full px-4">
+      <header className="header">
+        <div className="header-div">
           <p className="font-bold">Where in the world?</p>
           <ThemeSwitcher />
         </div>
       </header>
 
       <div className="min-h-screen w-full pt-16">
-        <h1 className="text-2xl text-purple dark:text-white">
+        <h1 className="text-2xl text-black dark:text-purple-200">
           HELLO, WORLD
         </h1>
       </div>

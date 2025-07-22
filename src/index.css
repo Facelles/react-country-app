@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
-
 
 @tailwind base;
 @tailwind components;
@@ -27,12 +25,16 @@
     @apply bg-blue-700 hover:bg-blue-800;
   }
   
-  .header-country {
-    @apply absolute top-0 left-0 w-screen bg-gray-50 h-14;
+  .header {
+    @apply fixed top-0 left-0 w-full bg-white h-16 z-50;
   }
 
-  .dark .header-country {
-    @apply absolute top-0 left-0 w-screen bg-blue-200 h-14;
+  .dark .header {
+    @apply bg-blue-100 text-white;
+  }
+
+  .header-div {
+    @apply max-w-screen-xl flex justify-between items-center h-full px-4
   }
 
 }
@@ -67,11 +69,5 @@
   .dark h1 {
     @apply text-purple-300;
   }
-
-  html, body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* Щоб прибрати горизонтальний скрол, якщо є */
-}
 
 }

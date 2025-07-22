@@ -29,23 +29,24 @@ function App() {
 
 
   return (
-    <ThemeProvider value={{ darkMode, toggleTheme: toogleDarkMode }}>
-      <main className="App ">
-        <header className='absolute top-0 left-0 w-screen bg-white h-17'>
-          <div className='max-w-screen-xl mx-auto grid grid-cols-2 flex justify-between items-center h-full'>
-            <p className='font-bold'>Where in the world?</p>
-            <ThemeSwitcher/>
-          </div>
-        </header>
+  <ThemeProvider value={{ darkMode, toggleTheme: toogleDarkMode }}>
+    <main className="App">
+      <header className="fixed top-0 left-0 w-full bg-white h-16 z-50">
+        <div className="max-w-screen-xl flex justify-between items-center h-full px-4">
+          <p className="font-bold">Where in the world?</p>
+          <ThemeSwitcher />
+        </div>
+      </header>
 
-        <body className='dark:bg-black min-h-screen m-0 p-0'>
-          <h1>
-            sSFDk
-          </h1>
-        </body>
-      </main>
-    </ThemeProvider>
-  );
+      <div className="min-h-screen w-full pt-16">
+        <h1 className="text-2xl text-purple dark:text-white">
+          HELLO, WORLD
+        </h1>
+      </div>
+    </main>
+  </ThemeProvider>
+);
+
 }
 
 export default App;

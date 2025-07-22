@@ -54,8 +54,9 @@
   body {
     @apply bg-gray-100 text-gray-900 m-0 p-0;
   }
-  html.dark body {
-      @apply bg-blue-200 text-black;
+
+  .dark body {
+    @apply bg-black;
   }
 
   h1 {
@@ -66,5 +67,11 @@
   .dark h1 {
     @apply text-purple-300;
   }
+
+  html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Щоб прибрати горизонтальний скрол, якщо є */
+}
 
 }

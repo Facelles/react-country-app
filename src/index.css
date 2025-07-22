@@ -55,7 +55,7 @@
     @apply bg-gray-100 text-gray-900 m-0 p-0;
   }
   html.dark body {
-      @apply bg-gray-900 text-white;
+      @apply bg-blue-200 text-black;
   }
 
   h1 {

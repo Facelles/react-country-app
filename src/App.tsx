@@ -39,8 +39,16 @@ function App() {
       </header>
 
       <div className="min-h-screen w-full pt-16">
-        <form action="/search" method='get'>
+        <form action="/search" method='get' className='max-w-screen-xl flex justify-between mx-5'>
           <input type="search" name='q' placeholder='Search for a country..' />
+          <select name="region-filter" id="region-select">
+                <option value="">All Regions</option>
+                <option value="Africa">Africa</option>
+                <option value="Americas">Americas</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="Oceania">Oceania</option>
+          </select>
         </form>
       </div>
     </main>

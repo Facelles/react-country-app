@@ -67,8 +67,8 @@ function App() {
       </div>
 
 
-      <div className='pt-12 flex justify-between'>
-        <FetchCountry searchQuery={searchQuery} region={regionFilter}></FetchCountry>
+      <div className='pt-8'>
+        <FetchCountry searchQuery={searchQuery} region={regionFilter} darkMode={darkMode}></FetchCountry>
       </div>
       
 

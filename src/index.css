@@ -26,7 +26,7 @@
   }
   
   .header {
-    @apply fixed top-0 left-0 w-full bg-white h-16 z-50;
+    @apply fixed top-0 left-0 w-full bg-white h-16 ;
   }
 
   .dark .header {
@@ -34,7 +34,7 @@
   }
 
   .header-div {
-    @apply max-w-screen-xl flex justify-between items-center h-full px-4
+    @apply max-w-screen-xl w-full flex justify-between items-center h-full px-4
   }
 
 }

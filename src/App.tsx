@@ -1,6 +1,7 @@
 import ThemeSwitcher from './components/ThemeSwitcher';
 import FetchCountry from './components/FetchCountry';
 import { useEffect, useState } from 'react';
+import { useDebounce } from 'use-debounce';
 import { ThemeProvider } from './context/theme'
 import './App.css';
 import './index.css';
@@ -12,8 +13,10 @@ function App() {
     return isDark === "true" ? true : false;
   });
 
-  const [searchQuery, setSearchQuery] = useState("");
-  const [regionFilter, setRegionFilter] = useState("");
+  const [searchQuery, setSearchQuery] = useState<string>("");
+  const [regionFilter, setRegionFilter] = useState<string>("");
+  const [debouncedSearchTerm] = useDebounce(searchQuery, 500);
+
 
   const toogleDarkMode = () => {
     setDarkMode((prev) => !prev)
@@ -43,7 +46,7 @@ function App() {
         </div>
       </header>
 
-      <div className="w-full pt-16 text-white">
+      <div className="w-full pt-16 ">
         <form onSubmit={(e) => e.preventDefault()}
          action="/search" method='get' className='max-w-screen-xl flex justify-between mx-5'>
           <input type="search" 
@@ -67,8 +70,8 @@ function App() {
       </div>
 
 
-      <div className='pt-8'>
-        <FetchCountry searchQuery={searchQuery} region={regionFilter} darkMode={darkMode}></FetchCountry>
+      <div className='pt-2 text-black bg:text-white'>
+        <FetchCountry searchQuery={debouncedSearchTerm} region={regionFilter} darkMode={darkMode}></FetchCountry>
       </div>
       
 

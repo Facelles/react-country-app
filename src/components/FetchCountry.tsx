@@ -34,9 +34,10 @@ const FetchCountry: React.FC<FetchCountryProps> = ({ searchQuery, region, darkMo
 
 
   const filtred = countries
-    .filter((country) =>
+      .filter((country) =>
+        searchQuery.trim() === "" ||
         country.name.toLowerCase().includes(searchQuery.toLowerCase())
-    )
+      )
     .filter((country) => 
         region ? country.region === region : true
     )

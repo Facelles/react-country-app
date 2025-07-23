@@ -30,11 +30,12 @@
   }
 
   .dark .header {
-    @apply bg-blue-100 text-white;
+    background-color: #2a3742;
+    color: white;
   }
 
   .header-div {
-    @apply max-w-screen-xl w-full flex justify-between items-center h-full px-4
+    @apply max-w-screen-xl w-full flex justify-between items-center h-full px-4;
   }
 
 }
@@ -58,7 +59,7 @@
   }
 
   .dark body {
-    @apply bg-black;
+    background-color: #212e37;
   }
 
   h1 {
@@ -67,7 +68,7 @@
   }
 
   .dark h1 {
-    @apply text-purple-300;
+    @apply text-white;
   }
 
 }

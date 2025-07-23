@@ -43,7 +43,7 @@ function App() {
         </div>
       </header>
 
-      <div className="w-full pt-16">
+      <div className="w-full pt-16 text-white">
         <form onSubmit={(e) => e.preventDefault()}
          action="/search" method='get' className='max-w-screen-xl flex justify-between mx-5'>
           <input type="search" 

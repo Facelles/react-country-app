@@ -48,8 +48,8 @@ return (
         {filtred.map((country) => (
           <div
             key={country.name}
-            className="{`${darkMode ? 'bg-gray-800' : 'bg-white'} rounded shadow p-4`}"
-          >
+             style={{ backgroundColor: darkMode ? '#2a3742' : 'white' }}
+             className="rounded shadow p-4"          >
             <img
               src={country.flags.png}
               alt={country.name}

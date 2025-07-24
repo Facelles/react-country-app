@@ -4,9 +4,10 @@ interface FetchCountryProps {
     searchQuery: string;
     region: string;
     darkMode: boolean;
+    onSelectCountry?: (country: Country) => void;
 }
 
-interface Country {
+export interface Country {
   name: string;
   capital: string;
   region: string;
@@ -23,7 +24,7 @@ interface Country {
   };
 }
 
-const FetchCountry: React.FC<FetchCountryProps> = ({ searchQuery, region, darkMode}) => {
+const FetchCountry: React.FC<FetchCountryProps> = ({ searchQuery, region, darkMode, onSelectCountry}) => {
   const [countries, setCountries] = useState<Country[]>([]);
 
   useEffect(() => {
@@ -49,6 +50,7 @@ return (
         {filtred.map((country) => (
           <div
             key={country.name}
+            onClick={() => onSelectCountry&&onSelectCountry(country)}
              style={{ backgroundColor: darkMode ? '#2a3742' : 'white' }}
              className="rounded shadow p-4"          >
             <img

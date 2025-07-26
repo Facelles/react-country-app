@@ -7,6 +7,19 @@ interface FetchCountryProps {
     onSelectCountry?: (country: Country) => void;
 }
 
+interface Currency {
+  code: string;
+  name: string;
+  symbol: string;
+}
+
+interface Languages {
+  iso639_1: string;
+  iso639_2: string;
+  name: string;
+  nativeName: string;
+}
+
 export interface Country {
   name: string;
   capital: string;
@@ -14,9 +27,14 @@ export interface Country {
   subregion: string;
   alpha2Code: string;
   alpha3Code: string;
+  languages: Languages[];
   timezones: string[];
+  topLevelDomain: string[];
+  currencies: Currency[];
   numericCode: string;
   population: number;
+  nativeName: string;
+  borders: string[];
   area: number;
   flags: {
     png: string;

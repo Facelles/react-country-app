@@ -1,4 +1,3 @@
-import { Code } from "@mui/icons-material";
 import type { Country } from "./FetchCountry"; 
 
 interface ModalPreviewProps {

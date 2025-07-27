@@ -7,7 +7,7 @@ interface ModalPreviewProps {
 
 const ModalPreview = ({ country, onClose }: ModalPreviewProps) => {
   return (
-    <div className='absolute top-16 left-0 w-full h-[calc(100vh-1rem)] bg-white z-50 p-8 overflow-y-auto'>
+    <div className='absolute top-16 left-0 w-full h-[calc(100vh-1rem)] bg-white z-50 p-8 overflow-y-auto dark:bg-color-black'>
       <button onClick={onClose} className='mb-8 bg-white shadow px-6 py-2 rounded font-medium absolute left-15'> ← Back </button>
 
 
@@ -53,7 +53,9 @@ const ModalPreview = ({ country, onClose }: ModalPreviewProps) => {
           </div>
           <br /><br />
               <ul className="text-left">
-                <li>Border Countries: {country.borders[0]} {country.borders[1]} {country.borders[2]} </li>
+                <li>Border Countries: {country.borders[0] == null ? "" : country.borders[0] },  
+                                      {country.borders[1] == null ? "" : country.borders[1] },
+                                      {country.borders[2] == null ? "" : country.borders[2] } </li>
               </ul>
           <div>
 
